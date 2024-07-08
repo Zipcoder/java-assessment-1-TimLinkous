@@ -9,6 +9,7 @@ public abstract class Pet implements Animal {
      * by default, pet has age of 0; name of "";
      */
     public Pet() {
+
     }
 
     /**
@@ -23,6 +24,7 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(int age) {
+        age = age;
     }
 
     /**
@@ -36,14 +38,14 @@ public abstract class Pet implements Animal {
      * @return name of this pet
      */
     public String getName() {
-        return null;
+        return name();
     }
 
     /**
      * @return age of this pet
      */
     public Integer getAge() {
-        return null;
+        return age();
     }
 
     /**

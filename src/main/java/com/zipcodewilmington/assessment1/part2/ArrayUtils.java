@@ -1,6 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by leon on 2/16/18.
@@ -81,7 +83,10 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-
+        List list = new ArrayList<>(Arrays.asList(objectArray));
+        list.addAll(Arrays.asList(objectArrayToAdd));
+        Object[] c = list.toArray();
+        return c;
 //        Object[] thirdArray = new Object[objectArray.length + objectArrayToAdd.length];
 //        int index = objectArray.length;
 //
@@ -91,6 +96,6 @@ public class ArrayUtils {
 //        for (int i = 0; i < objectArrayToAdd.length; i++){
 //            thirdArray[i + index] = objectArrayToAdd[i];
 //        }
-        return null;
+//        return null;
     }
 }
