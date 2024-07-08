@@ -15,6 +15,8 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        Cat cat = new Cat("Jim", 2);
+        Dog dog = new Dog("George", 1);
 
     }
 
@@ -69,6 +71,7 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
+
         return null;
     }
 

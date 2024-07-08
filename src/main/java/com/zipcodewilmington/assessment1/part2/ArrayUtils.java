@@ -16,8 +16,8 @@ public class ArrayUtils {
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
         int numOfOcc = 0;
-        for (int i = 0; i < objectArray.length; i++){
-            if (objectToCount == objectArray[i]){
+        for (int i = 0; i < objectArray.length; i++) {
+            if (objectToCount == objectArray[i]) {
                 numOfOcc++;
             }
         }
@@ -83,19 +83,17 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        List list = new ArrayList<>(Arrays.asList(objectArray));
-        list.addAll(Arrays.asList(objectArrayToAdd));
-        Object[] c = list.toArray();
-        return c;
-//        Object[] thirdArray = new Object[objectArray.length + objectArrayToAdd.length];
-//        int index = objectArray.length;
-//
-//        for (int i = 0; i < objectArray.length; i++){
-//            thirdArray[i] = objectArray[i];
-//        }
-//        for (int i = 0; i < objectArrayToAdd.length; i++){
-//            thirdArray[i + index] = objectArrayToAdd[i];
-//        }
-//        return null;
+        Object[] newArray = new Object[objectArray.length + objectArrayToAdd.length];
+        int i = 0;
+
+        for (Object each : objectArray) {
+            newArray[i++] = each;
+        }
+        for (Object each : objectArrayToAdd) {
+            newArray[i++] = each;
+        }
+
+        return null;
     }
 }
+
