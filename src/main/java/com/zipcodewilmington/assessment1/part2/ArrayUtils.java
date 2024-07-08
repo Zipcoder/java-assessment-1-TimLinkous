@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +13,14 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        int numOfOcc = 0;
+        for (int i = 0; i < objectArray.length; i++){
+            if (objectToCount == objectArray[i]){
+                numOfOcc++;
+            }
+        }
+        return numOfOcc;
+//        return null;
     }
 
     /**
@@ -21,7 +30,12 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        int i, j;
+        for (i = j = 0; j < objectArray.length; j++)
+            if (!objectToRemove.equals(objectArray[j])) objectArray[i++] = objectArray[j];
+        objectArray = Arrays.copyOf(objectArray, i);
+        return objectArray;
+//        return null;
     }
 
     /**
@@ -30,7 +44,23 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+        int a = 1, tempCount;
+        Object common = objectArray[0];
+        int b = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            b = (int) objectArray[i];
+            tempCount = 0;
+            for (int j = 1; j < objectArray.length; j++) {
+                if (b == (int) objectArray[j])
+                    tempCount++;
+            }
+            if (tempCount > a) {
+                common = b;
+                a = tempCount;
+            }
+        }
+        return common;
+//        return null;
     }
 
 
@@ -40,6 +70,7 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
+
         return null;
     }
 
@@ -50,6 +81,16 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+
+//        Object[] thirdArray = new Object[objectArray.length + objectArrayToAdd.length];
+//        int index = objectArray.length;
+//
+//        for (int i = 0; i < objectArray.length; i++){
+//            thirdArray[i] = objectArray[i];
+//        }
+//        for (int i = 0; i < objectArrayToAdd.length; i++){
+//            thirdArray[i + index] = objectArrayToAdd[i];
+//        }
         return null;
     }
 }
