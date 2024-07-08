@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -34,7 +36,24 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
+        int countEven = 0;
+        int even[]= null;
+
+        for (int i : ints){
+            if (i % 2 == 0);
+            ++countEven;
+        }
+
+        even = new int[countEven];
+
+        int i = 0;
+        for(int num : ints){
+            if (num % 2 == 0){
+                even[i++] = num;
+            }
+        }
         return null;
+//        return null;
     }
 
     /**

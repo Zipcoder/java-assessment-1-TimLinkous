@@ -8,22 +8,23 @@ public class Cat extends Pet {
      * @param name name of this Cat
      * @param age age of this Cat
      */
-    public Cat(String name, Integer age) {
-        super();
+    public Cat(String name, int age) {
+        super(name, age);
+
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
-        int a ;
-
+        super(null, age);
     }
 
     /**
      * @param name name of this Cat
      */
     public Cat(String name) {
+        super(name, 0);
 
 
     }
@@ -35,6 +36,7 @@ public class Cat extends Pet {
      * age is 0
      */
     public Cat() {
+        Cat cat = new Cat("Jim", 7);
     }
 
     /**
@@ -45,13 +47,13 @@ public class Cat extends Pet {
     }
 
     @Override
-    public Integer age() {
-        return age();
+    public int age() {
+        return this.getAge();
     }
 
     @Override
     public String name() {
-        return name();
+        return this.getName();
     }
 
     @Override
